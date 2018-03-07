@@ -4,6 +4,8 @@ class Footer extends React.Component {
   removeClass(){
     var el = document.getElementById('footer');
     el.classList.remove("active");
+      var removeFromBody = document.getElementsByTagName('BODY');
+      removeFromBody[0].classList.remove("content-active");
   }
   render() {
     return (

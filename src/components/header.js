@@ -9,6 +9,7 @@ class Header extends React.Component{
     var addToBody = document.getElementById('body');
     addToBody.classList.add("content-active");
   }
+
   render(){
     return(
       <header id="header">
@@ -24,6 +25,13 @@ class Header extends React.Component{
             </li>
           </ul>
         </nav>
+          <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                  document.getElementById('body').classList.remove('loading')
+                }, 500)
+            })
+          </script>
       </header>
     )
   }

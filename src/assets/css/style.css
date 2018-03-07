@@ -1109,9 +1109,12 @@
 		background: rgba(31, 34, 36, 0.925);
 		box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
 		cursor: default;
+        width: auto;
+        height: auto;
+        transition: all 1s linear;
 	}
 
-		.poptrox-popup:before {
+		.poptrox-popup::before {
 			-moz-transition: opacity 0.2s ease-in-out;
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
@@ -1575,6 +1578,7 @@
 				position: absolute;
 				top: 0;
 				width: 100%;
+				cursor: pointer;
 			}
 
 			#main .thumb > h2 {

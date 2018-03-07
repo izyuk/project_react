@@ -6,11 +6,13 @@ import Footer from './footer';
 import '../assets/css/style.css';
 
 const Wrapper = () => (
-  <div id="wrapper">
-    <Header />
-    <ProjectList />
-    <Footer />
-    {/* <Details /> */}
+  <div>
+    <div id="wrapper">
+      <Header />
+      <ProjectList />
+      <Footer />
+    </div>
+    <Details />
   </div>
 );
 
