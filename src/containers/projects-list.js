@@ -21,10 +21,6 @@ class ProjectList extends Component {
     popup.style.width = loaderHeight+'px';
     popup.style.height = loaderHeight+'px';
 
-    // if(image && typeof image !== 'undefined'){
-    //   image.remove();
-    // }
-
 
     var image = new Image();
     image = document.getElementsByClassName('pic')[0].children[0];
@@ -61,7 +57,7 @@ class ProjectList extends Component {
 
     document.getElementsByClassName('loader')[0].style.display = 'block';
     var delay = 1000;
-    function imageResize(imageWidth, imageHeight, breakpointToCheck) {
+    function imageResize(imageWidth, imageHeight, breakpointToCheck, time) {
 
       setTimeout(function () {
         var winWidth = window.innerWidth;
@@ -100,9 +96,9 @@ class ProjectList extends Component {
         //   popup.style.width = imageWidth+'px';
         //   popup.style.height = imageHeight+'px';
         // }, 10);
-        jsTransitionScale(popup, loaderHeight, loaderHeight, imageWidth, imageHeight, 1000);
+        jsTransitionScale(popup, loaderHeight, loaderHeight, imageWidth, imageHeight, (time/2));
 
-      }, delay);
+      }, time);
 
     }
     // var nImage = new Image();
@@ -122,7 +118,7 @@ class ProjectList extends Component {
           small: 736,
           xsmall: 480
         };
-        imageResize(imageWidth, imageHeight, breakpointToCheck);
+        imageResize(imageWidth, imageHeight, breakpointToCheck, delay);
       }
       console.log(image);
       image.onload = function () {
@@ -138,9 +134,9 @@ class ProjectList extends Component {
           small: 736,
           xsmall: 480
         };
-        imageResize(imageWidth, imageHeight, breakpointToCheck);
+        imageResize(imageWidth, imageHeight, breakpointToCheck, delay);
         window.onresize = function () {
-          imageResize(imageWidth, imageHeight, breakpointToCheck);
+          imageResize(imageWidth, imageHeight, breakpointToCheck, delay);
         }
         console.log(imageWidth);
         console.log(imageHeight);

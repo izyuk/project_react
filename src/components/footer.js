@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './mail_form';
 
 class Footer extends React.Component {
   removeClass(){
@@ -6,7 +7,7 @@ class Footer extends React.Component {
     el.classList.remove("active");
       var removeFromBody = document.getElementsByTagName('BODY');
       removeFromBody[0].classList.remove("content-active");
-  }
+  } 
   render() {
     return (
       <footer id="footer" className="panel">
@@ -59,21 +60,7 @@ class Footer extends React.Component {
           <div>
             <section>
               <h2>Get in touch</h2>
-              <form method="post" action="#">
-                <div className="field half first">
-                  <input type="text" name="name" id="name" placeholder="Name"/>
-                </div>
-                <div className="field half">
-                  <input type="text" name="email" id="email" placeholder="Email"/>
-                </div>
-                <div className="field">
-                  <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-                </div>
-                <ul className="actions">
-                  <li><input type="submit" value="Send" className="special"/></li>
-                  <li><input type="reset" value="Reset"/></li>
-                </ul>
-              </form>
+              {/*<Form />*/}
             </section>
           </div>
         </div>
