@@ -14,9 +14,9 @@ class Header extends React.Component{
     return(
       <header id="header">
         <h1>
-          <a href="index.html">
+          <Link to="/">
             <strong>Multiverse</strong>
-            by HTML5 UP</a>
+            by HTML5 UP</Link>
         </h1>
         <nav>
           <ul>

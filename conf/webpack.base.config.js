@@ -29,6 +29,7 @@ export default new Config().merge({
       { test: /\.json$/, loader: 'json-loader' },
     ]
   },
+  // watch: true,
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',

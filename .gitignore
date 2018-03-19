@@ -3,6 +3,11 @@
 # dependencies
 /node_modules
 
+#images
+/src/img/
+/public/css/images/
+/build/static/
+
 # testing
 /coverage
 
