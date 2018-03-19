@@ -4,9 +4,8 @@
 /node_modules
 
 #images
-/src/img/
-/public/css/images/
-/build/static/
+*.jpg
+*.png
 
 # testing
 /coverage
